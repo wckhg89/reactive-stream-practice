@@ -2,7 +2,7 @@ group 'guppy'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'idea'
+apply plugin: 'groovy'
 
 sourceCompatibility = 1.8
 
@@ -10,17 +10,12 @@ repositories {
     mavenCentral()
 }
 
-idea {
-    module {
-        testSourceDirs += file('src/test/groovy')
-    }
-}
-
 ext {
     spockVersion = '1.1-groovy-2.4'
     reativeStreamVersion = '1.0.1'
     slf4jVersion = '1.7.21'
     logbackVersion = '1.2.3'
+    lombokVersion = '1.16.18'
 }
 
 dependencies {
@@ -41,5 +36,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: "${logbackVersion}"
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
 
 }
