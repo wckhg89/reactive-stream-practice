@@ -17,5 +17,11 @@ public class JohnSubscriber implements Observer {
     @Override
     public void update(Observable o, Object info) {
         logger.info("oh..? - {}", info);
+
+        if (o instanceof Guppy) {
+            ((Guppy) o).aboutGuppy();
+        }
+
+        logger.info("=========== 9분선 =============");
     }
 }
