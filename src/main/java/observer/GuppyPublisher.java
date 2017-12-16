@@ -1,6 +1,5 @@
 package observer;
 
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,12 +13,12 @@ import java.util.Observer;
  */
 
 @NoArgsConstructor
-public class Guppy extends Observable {
+public class GuppyPublisher extends Observable {
 
-    private static final Logger logger = LoggerFactory.getLogger(Guppy.class);
+    private static final Logger logger = LoggerFactory.getLogger(GuppyPublisher.class);
 
     private String name = "Honggu Kang";
-    private String company = "ZUM interernet";
+    private String company = "ZUM internet";
     private String status = "tired";
     private int age = 29;
 

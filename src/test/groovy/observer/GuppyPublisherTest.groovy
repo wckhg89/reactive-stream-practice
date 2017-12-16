@@ -6,12 +6,12 @@ import spock.lang.Specification
  * Created by guppy.kang on 2017. 12. 16.
  * email : guppy.kang@kakaocorp.com
  */
-class GuppyStationTest extends Specification {
+class GuppyPublisherTest extends Specification {
 
     def "구피 알림이 테스트" () {
         given:
 
-        Guppy guppy = new Guppy()
+        GuppyPublisher guppy = new GuppyPublisher()
 
         when:
 
