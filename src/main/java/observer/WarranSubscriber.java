@@ -22,8 +22,8 @@ public class WarranSubscriber implements Observer {
 
         logger.info("hmm.. - {}", info);
 
-        if (o instanceof Guppy) {
-            ((Guppy) o).aboutGuppy();
+        if (o instanceof GuppyPublisher) {
+            ((GuppyPublisher) o).aboutGuppy();
         }
 
 

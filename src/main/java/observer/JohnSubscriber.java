@@ -18,8 +18,8 @@ public class JohnSubscriber implements Observer {
     public void update(Observable o, Object info) {
         logger.info("oh..? - {}", info);
 
-        if (o instanceof Guppy) {
-            ((Guppy) o).aboutGuppy();
+        if (o instanceof GuppyPublisher) {
+            ((GuppyPublisher) o).aboutGuppy();
         }
 
         logger.info("=========== 9분선 =============");
