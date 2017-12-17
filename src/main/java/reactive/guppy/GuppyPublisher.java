@@ -1,4 +1,4 @@
-package reactive;
+package reactive.guppy;
 
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;

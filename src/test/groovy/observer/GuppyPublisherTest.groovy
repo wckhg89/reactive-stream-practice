@@ -1,5 +1,8 @@
 package observer
 
+import observer.guppy.GuppyPublisher
+import observer.guppy.JohnSubscriber
+import observer.guppy.WarranSubscriber
 import spock.lang.Specification
 
 /**

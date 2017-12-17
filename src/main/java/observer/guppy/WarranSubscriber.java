@@ -1,4 +1,4 @@
-package observer;
+package observer.guppy;
 
 import lombok.Setter;
 import org.slf4j.Logger;

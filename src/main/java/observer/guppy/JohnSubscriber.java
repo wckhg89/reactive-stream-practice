@@ -1,4 +1,4 @@
-package observer;
+package observer.guppy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ public class JohnSubscriber implements Observer {
             boolean isEnd = this.parsingInfoForEndSignal((String) info);
 
             if (isEnd) {
-                logger.info("END!");
+                logger.info("Wow!");
             }
         }
 

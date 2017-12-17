@@ -1,4 +1,4 @@
-package observer;
+package observer.guppy;
 
 import com.google.common.collect.Lists;
 import lombok.NoArgsConstructor;
