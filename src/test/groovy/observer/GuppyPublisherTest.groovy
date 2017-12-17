@@ -22,6 +22,7 @@ class GuppyPublisherTest extends Specification {
 
         guppy.changeJob()
         guppy.newYear()
+        guppy.addSkill()
 
     }
 

@@ -26,6 +26,7 @@ public class WarranSubscriber implements Observer {
             ((GuppyPublisher) o).aboutGuppy();
         }
 
-
     }
+
+
 }
