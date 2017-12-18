@@ -15,7 +15,7 @@ class StackReactiveTest extends Specification {
 
         StackPublisher stackPublisher = new StackPublisher()
         StackSubscriber stackSubscriber = new StackSubscriber()
-        
+
         when:
 
         stackPublisher.subscribe(stackSubscriber)
