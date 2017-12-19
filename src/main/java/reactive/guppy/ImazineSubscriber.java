@@ -2,6 +2,9 @@ package reactive.guppy;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import reactive.stack.StackSubscriber;
 
 /**
  * Created by guppy.kang on 2017. 12. 16.
@@ -9,11 +12,13 @@ import org.reactivestreams.Subscription;
  */
 public class ImazineSubscriber implements Subscriber {
 
+    private static final Logger logger = LoggerFactory.getLogger(StackSubscriber.class);
+    private Subscription subscription;
 
     // onSubscribe는 최초 호출되는 메소드입니다.
     // Subscriber를 사용할때에는 무조건 처음에 호출해야 하는 내용이 스펙에 등록되어있습니다.
     @Override
-    public void onSubscribe(Subscription s) {
+    public void onSubscribe(Subscription subscription) {
 
     }
 
