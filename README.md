@@ -85,6 +85,29 @@
 
 
 
+
+### 키워드 (내가이해한거 위주로)
+
+
+- 함수형 프로그래밍
+    - filter, map ,reduce
+
+- 리액티브 프로그래밍
+
+    - 비동기, 옵저버, 콜백
+
+- FRP
+
+    - RX (비동기 함수형
+
+
+
+
 ## 참고
 
 http://wiki.sys4u.co.kr/pages/viewpage.action?pageId=7766896
+
+
+https://m.blog.naver.com/PostView.nhn?blogId=jdub7138&logNo=220983291803&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
+
+https://gist.github.com/casamia918/93b8db69beb9ee06b92a96b2a234d48e
