@@ -18,14 +18,14 @@ public class StackSubscriber implements Subscriber {
     public void onSubscribe(Subscription subscription) {
         this.subscription = subscription;
 
-        subscription.request(1);
+        subscription.request(10);
     }
 
     @Override
     public void onNext(Object o) {
         logger.info("onNext - {}", o);
 
-        subscription.request(1);
+        subscription.request(10);
     }
 
     @Override

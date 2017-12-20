@@ -30,8 +30,10 @@ public class GuppyPublisher implements Publisher {
         subscriber.onSubscribe(new Subscription() {
             @Override
             public void request(long n) {
-                if (n <= 0) {
-                    
+                if (n < 0) {
+                    subscriber.onError(new Exception("  0 이상의 숫자를 넣어야 합니다"));
+
+                    return;
                 }
             }
 
@@ -39,28 +41,33 @@ public class GuppyPublisher implements Publisher {
             public void cancel() {
 
             }
+
+
+            public void changeJob () {
+                company = "Kakao corp";
+                status = "happy";
+
+                this.request(1);
+            }
+
+            public void newYear () {
+                age += 1;
+                status = "sad";
+
+                this.request(1);
+            }
+
+            public void addSkill () {
+                skills.add("webpack");
+                this.request(1);
+                skills.add("reactJS");
+                this.request(1);
+                skills.add("reactive-stream");
+                this.request(1);
+            }
         });
     }
 
 
-    public void changeJob () {
-        this.company = "Kakao corp";
-        this.status = "happy";
 
-
-    }
-
-    public void newYear () {
-        this.age += 1;
-        this.status = "sad";
-
-    }
-
-    public void addSkill () {
-        skills.add("webpack");
-
-        skills.add("reactJS");
-
-        skills.add("reactive-stream");
-    }
 }

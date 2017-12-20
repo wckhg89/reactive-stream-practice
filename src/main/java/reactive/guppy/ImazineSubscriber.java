@@ -19,7 +19,7 @@ public class ImazineSubscriber implements Subscriber {
     // Subscriber를 사용할때에는 무조건 처음에 호출해야 하는 내용이 스펙에 등록되어있습니다.
     @Override
     public void onSubscribe(Subscription subscription) {
-
+        subscription.request(1);
     }
 
 
@@ -33,7 +33,7 @@ public class ImazineSubscriber implements Subscriber {
     // 에러가 있으면 onError 에서 처리
     @Override
     public void onError(Throwable t) {
-
+        logger.error("onErr - {}", t.getMessage());
     }
 
 
