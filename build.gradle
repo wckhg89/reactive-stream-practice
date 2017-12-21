@@ -13,6 +13,7 @@ repositories {
 ext {
     spockVersion = '1.1-groovy-2.4'
     reativeStreamVersion = '1.0.1'
+    rxJavaVersion = '1.3.4'
     slf4jVersion = '1.7.21'
     logbackVersion = '1.2.3'
     lombokVersion = '1.16.18'
@@ -28,6 +29,10 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams
     compile group: 'org.reactivestreams', name: 'reactive-streams', version: "${reativeStreamVersion}"
+
+    // https://mvnrepository.com/artifact/io.reactivex/rxjava
+    compile group: 'io.reactivex', name: 'rxjava', version: "${rxJavaVersion}"
+
 
     // SLF4J
     compile group: 'org.slf4j', name: 'slf4j-api', version: "${slf4jVersion}"
