@@ -191,7 +191,10 @@ public class JohnSubscriber implements Observer {
 리액티브 스트림은 리액티브 프로그래밍에 대한 표준을 정의한 인터페이스입니다. ([참고링크](http://www.reactive-streams.org/))
 
 ```
-Reactive Stream은 매우 낮은 수준의 계약으로, 몇 안되는 Java 인터페이스(와 Technology Compatibility Kit)로 표현되지만, 다른 언어에도 적용될 수 있다. 이 인터페이스들은 명시적인 배압(back pressure)과 함께 배포자(Publisher)와 구독자(Subscriber)를 위한 기본적인 빌딩 블럭을 표현하는데, 상호 정보교환을 하는 라이브러리들을 위한 일반적인 언어를 만든다.
+Reactive Stream은 매우 낮은 수준의 계약으로, 몇 안되는 Java 인터페이스(와 Technology Compatibility Kit)로 표현되지만,
+다른 언어에도 적용될 수 있다. 이 인터페이스들은 명시적인 배압(back pressure)과 함께
+배포자(Publisher)와 구독자(Subscriber)를 위한 기본적인 빌딩 블럭을 표현하는데,
+상호 정보교환을 하는 라이브러리들을 위한 일반적인 언어를 만든다.
 ```
 
 리액티브 스트림의 스팩에는 4가지 인터페이스 스팩이 나옵니다.
