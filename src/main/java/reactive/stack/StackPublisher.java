@@ -18,13 +18,14 @@ public class StackPublisher implements Publisher {
 
     private Stack<Integer> stack;
 
+    public StackPublisher() {
+        this.stack = new Stack<>();
+
+    }
+
     @Override
     public void subscribe(Subscriber subscriber) {
-        stack = new Stack<>();
-
-        for(int i = 0; i < 10 ; i++){
-            stack.push(i);
-        }
+        initStack();
 
         subscriber.onSubscribe(new Subscription() {
             public void request(long l) {
@@ -32,23 +33,42 @@ public class StackPublisher implements Publisher {
                 logger.info("Request : {}", l);
 
                 if(l < 0) {
-                    subscriber.onError(new Exception("  0 이상의 숫자를 넣어야 합니다"));
+                    notifyException();
                     return;
                 }
 
                 for(int i = 1 ; i <= l ; i++) {
                     if(stack.empty()) {
-                        subscriber.onComplete();
+                        notifyComplete();
 
                         return;
                     }
 
-                    subscriber.onNext(stack.pop());
+                    notifyNextEvent();
                 }
             }
+
+            private void notifyNextEvent() {
+                subscriber.onNext(stack.pop());
+            }
+
+            private void notifyComplete() {
+                subscriber.onComplete();
+            }
+
+            private void notifyException() {
+                subscriber.onError(new Exception("  0 이상의 숫자를 넣어야 합니다"));
+            }
+
             public void cancel() {
 
             }
         });
+    }
+
+    private void initStack() {
+        for(int i = 0; i < 10 ; i++){
+            stack.push(i);
+        }
     }
 }

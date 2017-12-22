@@ -45,6 +45,9 @@ public class RxJavaSample {
 
         myObservable.subscribe(mySubscriber);
 
+
+
+
     }
 
 }

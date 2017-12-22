@@ -19,7 +19,7 @@ class StackReactiveTest extends Specification {
         when:
 
         stackPublisher.subscribe(stackSubscriber)
-
+        
         then:
 
         true
