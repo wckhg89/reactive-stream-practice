@@ -314,7 +314,7 @@ public class StackPublisher implements Publisher {
 }
 
 ```
-ㅊ
+
 그리고 Publisher 인터페이스는 자바 Util의 Observable 클래스와 유사한 역할을 담당합니다.
 ``subscribe()`` 메소드를 통해서 Subscriber들을 등록하고 해당 객체들을 관리합니다.
 
