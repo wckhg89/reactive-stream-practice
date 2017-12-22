@@ -42,7 +42,7 @@ Reactive programming is programming with asynchronous data streams.
 이러한 이유로 ``비동기``, ``논블록킹 IO``라는 키워드들이 함께 등장하는 것이라고 생각합니다.
 
 사용자가 입력을 줄때마다 즉각적으로 반응을 하려면, 프로그램이 지속적으로 값을 관찰(Observe)해야하고, 값에 변화가 일어날 때마다 특정 연산이 수행되어야 합니다.
-이러한 패턴이 ``옵저버 패턴``입니다.([참고링크](https://m.blog.naver.com/PostView.nhn?blogId=jdub7138&logNo=220983291803&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)])
+이러한 패턴이 ``옵저버 패턴``입니다.([참고링크](https://m.blog.naver.com/PostView.nhn?blogId=jdub7138&logNo=220983291803&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F))
 
 
 #### 옵저버 패턴
@@ -311,7 +311,7 @@ public class StackPublisher implements Publisher {
 }
 
 ```
-
+ㅊ
 그리고 Publisher 인터페이스는 자바 Util의 Observable 클래스와 유사한 역할을 담당합니다.
 ``subscribe()`` 메소드를 통해서 Subscriber들을 등록하고 해당 객체들을 관리합니다.
 
